@@ -16,12 +16,13 @@ A full-stack inventory management system tailored for managing stock, orders, an
 
 ## 🧱 Tech Stack
 
+| Layer         | Technology         |
 |---------------|--------------------|
 | code languages| CSS/JS             |
 | Frontend      | React.js           |
 | Backend       | Node.js + Express  |
 | Database      | MongoDB (Mongoose) |
-|---------------|--------------------|
+
 
 ---
 
