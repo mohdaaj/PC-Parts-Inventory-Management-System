@@ -30,6 +30,7 @@ A full-stack inventory management system tailored for managing stock, orders, an
 
 ---
 
+
 ## 🌐 Web Routes (Views)
 
 | Method | Route                  | Purpose                              | Authentication |
@@ -38,8 +39,6 @@ A full-stack inventory management system tailored for managing stock, orders, an
 | POST   | /users                 | Create user account                  | ❌ No           |
 | GET    | /users/login           | Show login form                      | ❌ No           |
 | POST   | /users/login           | Authenticate user                    | ❌ No           |
-| PUT    | /users/:id             | Update user profile                  | ✅ Yes          |
-| DELETE | /users/:id             | Delete user account                  | ✅ Yes          |
 | GET    | /products              | Show all PC parts                    | ✅ Yes          |
 | GET    | /products/new          | Show form to add new product         | ✅ Yes          |
 | POST   | /products              | Add new product                      | ✅ Yes          |
@@ -53,9 +52,9 @@ A full-stack inventory management system tailored for managing stock, orders, an
 | POST   | /orders                | Create new order                     | ✅ Yes          |
 | GET    | /orders/:id            | Show order details                   | ✅ Yes          |
 
-### Web Route Summary
-- **Total Web Routes**: 19  
-- 🔐 **Require Authentication**: 15  
+### ✅ Web Route Summary
+- **Total Web Routes**: 16  
+- 🔐 **Require Authentication**: 12  
 - 🌐 **Publicly Accessible**: 4
 
 ---
@@ -66,9 +65,7 @@ A full-stack inventory management system tailored for managing stock, orders, an
 |--------|-------------------------|--------------------------------------|----------------|
 | POST   | /api/users              | Create user (API)                    | ❌ No           |
 | POST   | /api/users/login        | Login user (API)                     | ❌ No           |
-| GET    | /api/users/profile      | Get user profile                     | ✅ Yes          |
-| PUT    | /api/users/:id          | Update user (API)                    | ✅ Yes          |
-| DELETE | /api/users/:id          | Delete user (API)                    | ✅ Yes          |
+| GET    | /api/users/profile      | Get user (API)                       | ✅ Yes          |
 | GET    | /api/products           | List all PC parts                    | ✅ Yes          |
 | GET    | /api/products/:id       | Get product by ID                    | ✅ Yes          |
 | POST   | /api/products           | Create new product                   | ✅ Yes          |
@@ -79,9 +76,9 @@ A full-stack inventory management system tailored for managing stock, orders, an
 | GET    | /api/orders/:id         | Get order by ID                      | ✅ Yes          |
 | POST   | /api/orders             | Create new order                     | ✅ Yes          |
 
-### API Route Summary
-- **Total API Routes**: 14  
-- 🔐 **Require Authentication**: 11  
+### ✅ API Route Summary
+- **Total API Routes**: 12  
+- 🔐 **Require Authentication**: 9  
 - 🌐 **Publicly Accessible**: 3
 
 ---
@@ -90,10 +87,9 @@ A full-stack inventory management system tailored for managing stock, orders, an
 
 | Route Type   | Total Routes | Auth Required | Public |
 |--------------|--------------|----------------|--------|
-| Web Views    | 19           | 15             | 4      |
-| API (JSON)   | 14           | 11             | 3      |
-| **Combined** | **33**       | **26**         | **7**  |
+| Web Views    | 16           | 12             | 4      |
+| API (JSON)   | 12           | 9              | 3      |
+| **Combined** | **28**       | **21**         | **7**  |
 
 ---
-
 
