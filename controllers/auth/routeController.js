@@ -4,6 +4,7 @@ const dataController = require('./dataController')
 const viewController = require('./viewController')
 const productsViewController = require('../products/viewController')
 
+
 router.post('/', dataController.createUser, viewController.redirectToLogin)// signup user => login page
 router.get('/', viewController.signUp) // show sign up form
 router.post('/login', dataController.loginUser, productsViewController.redirectHome)

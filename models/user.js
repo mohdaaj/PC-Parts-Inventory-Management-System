@@ -6,7 +6,7 @@ const userSchema = new mongoose.Schema({
   name: String,
   email: String,
   password: String,
-  pcParts: [{ type: mongoose.Schema.Types.ObjectId, ref: 'PcPart' }]
+  products: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Product' }]
 })
 
 // Hide password from JSON responses

@@ -36,7 +36,7 @@ function SignIn (props) {
                          Sign In
                     </button>
                     <a href="/users" className="btn btn-secondary">
-                         Create Account Insted
+                         Sign Up Insted
                     </a>
                 </div>
             </form>
