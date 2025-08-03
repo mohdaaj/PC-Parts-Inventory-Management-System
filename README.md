@@ -47,14 +47,12 @@ A full-stack inventory management system tailored for managing stock, orders, an
 | PUT    | /products/:id          | Update product                       | ✅ Yes          |
 | DELETE | /products/:id          | Delete product                       | ✅ Yes          |
 | GET    | /suppliers             | Show list of suppliers               | ✅ Yes          |
-| GET    | /orders                | Show all orders                      | ✅ Yes          |
-| GET    | /orders/new            | Show form to place a new order       | ✅ Yes          |
-| POST   | /orders                | Create new order                     | ✅ Yes          |
-| GET    | /orders/:id            | Show order details                   | ✅ Yes          |
+| GET    | /cart                  | Show all produts                     | ✅ Yes          |
+
 
 ### ✅ Web Route Summary
-- **Total Web Routes**: 16  
-- 🔐 **Require Authentication**: 12  
+- **Total Web Routes**: 13  
+- 🔐 **Require Authentication**: 9  
 - 🌐 **Publicly Accessible**: 4
 
 ---
@@ -72,14 +70,14 @@ A full-stack inventory management system tailored for managing stock, orders, an
 | PUT    | /api/products/:id       | Update product                       | ✅ Yes          |
 | DELETE | /api/products/:id       | Delete product                       | ✅ Yes          |
 | GET    | /api/suppliers          | List suppliers                       | ✅ Yes          |
-| GET    | /api/orders             | List all orders                      | ✅ Yes          |
-| GET    | /api/orders/:id         | Get order by ID                      | ✅ Yes          |
-| POST   | /api/orders             | Create new order                     | ✅ Yes          |
+| GET    | /api/cart               | List all products                    | ✅ Yes          |
+| GET    | /api/cart/:id           | Get order by ID                      | ✅ Yes          |
+| POST   | /api/cart               | Create new order                     | ✅ Yes          |
 
 ### ✅ API Route Summary
 - **Total API Routes**: 12  
-- 🔐 **Require Authentication**: 9  
-- 🌐 **Publicly Accessible**: 3
+- 🔐 **Require Authentication**: 10  
+- 🌐 **Publicly Accessible**: 2
 
 ---
 
@@ -87,9 +85,9 @@ A full-stack inventory management system tailored for managing stock, orders, an
 
 | Route Type   | Total Routes | Auth Required | Public |
 |--------------|--------------|----------------|--------|
-| Web Views    | 16           | 12             | 4      |
-| API (JSON)   | 12           | 9              | 3      |
-| **Combined** | **28**       | **21**         | **7**  |
+| Web Views    | 13           | 12             | 4      |
+| API (JSON)   | 12           | 10              | 3      |
+| **Combined** | **25**       | **21**         | **7**  |
 
 ---
 
