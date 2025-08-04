@@ -5,7 +5,7 @@ const dataController = require('./dataController.js')
 const authDataController = require('../auth/dataController.js')
 // add routes
 // Index
-router.get('/',dataController.index, viewController.Index);
+router.get('/', authDataController.auth,dataController.index, viewController.Index);
 // New
 router.get('/new', authDataController.auth, viewController.newView );
 // Delete

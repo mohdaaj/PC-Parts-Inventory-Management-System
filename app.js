@@ -5,6 +5,7 @@ const methodOverride = require('method-override')
 const userRoutes = require('./controllers/auth/routeController')
 const productsRouter = require('./controllers/products/routeController')
 
+
 const app = express()
 
 app.set('view engine', 'jsx')

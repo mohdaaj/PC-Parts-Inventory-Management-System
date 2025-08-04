@@ -7,26 +7,27 @@ const jwt = require('jsonwebtoken')
 
 exports.auth = async (req, res, next) => {
   try {
-    let token
-    if(req.query.token){
-      token = req.query.token
-    }else if(req.header('Authorization')){
-      token = req.header('Authorization').replace('Bearer ', '')
-    }else {
-      throw new Error('No token provided')
+
+    let token;
+    if (req.query.token) {
+      token = req.query.token;
+    } else if (req.header('Authorization')) {
+      token = req.header('Authorization').replace('Bearer ', '');
+    } else {
+      throw new Error('No token provided');
     }
-    const data = jwt.verify(token, 'secret')
-    const user = await User.findOne({ _id: data._id })
-    if (!user) {
-      throw new Error()
-    }
-    req.user = user
-    res.locals.data.token = token
-    next()
+
+    const data = jwt.verify(token, 'secret');
+    const user = await User.findOne({ _id: data._id });
+    if (!user) throw new Error('User not found');
+
+    req.user = user;
+    res.locals.data.token = token; // Ensure token is set here
+    next();
   } catch (error) {
-    res.status(401).send('Not authorized')
+    res.status(401).send('Not authorized');
   }
-} // check
+}; // check
 
 exports.createUser = async (req, res, next) => {
   try{
