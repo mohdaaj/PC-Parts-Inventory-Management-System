@@ -150,5 +150,13 @@ input {
   gap: 16px;
   flex-wrap: wrap;
   justify-content: center;
+
 }
 
+#thewebname{
+  background-color: #af8c56;
+  border: 3px solid #2e19e6;
+  border-radius: 7px;
+  font-style: italic; 
+  font-size: 30px;
+}

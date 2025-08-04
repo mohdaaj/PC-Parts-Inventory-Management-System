@@ -16,13 +16,13 @@ function Index(props) {
       <body>
         <nav>
           <div id="destinations">
-            <p>   </p>
+            <p id="thewebname">PC PARTS</p>
           </div>
           <div id="actions">
             {user ? (
               <>
                 <p>Welcome, {user.name}</p>
-                <form action="/users" method="GET">
+                <form action="/users" method="POST">
                   <button type="submit">Log Out</button>
                 </form>
               </>
@@ -64,7 +64,7 @@ function Index(props) {
               <div key={product._id} className="product-card">
                 <div className="product-name"><strong>{product.name}</strong></div>
                 <div className="product-description">📝 {product.description || 'No description'}</div>
-                <div className="product-price">💰 Price: ${product.price.toFixed(2)}</div>
+                <div className="product-price">💰 Price: ${product.price}</div>
                 <div className="product-quantity">📦 In Stock: {product.quantity}</div>
                 <div className="product-supplier">🏢 Supplier: {product.supplier?.name || '—'}</div>
                 <div className="product-date">📅 Added: {new Date(product.createdAt).toLocaleDateString()}</div>

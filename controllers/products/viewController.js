@@ -13,6 +13,7 @@ const viewController = {
     res.render('products/Index', {
       user: req.user,
       products: res.locals.data.products,
+      token: res.locals.data.token
     });
   },
 
@@ -30,7 +31,6 @@ const viewController = {
 
   newView(req, res, next) {
     res.render('products/New', res.locals.data);
-    
   },
 
   redirectHome(req, res, next) {
