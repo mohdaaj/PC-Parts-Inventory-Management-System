@@ -15,9 +15,16 @@ router.delete('/:id',authDataController.auth, dataController.destroy, viewContro
 router.put('/:id',authDataController.auth, dataController.update, viewController.redirectShow);
 // Create
 router.post('/', authDataController.auth, dataController.create, viewController.redirectHome);
+
 // Edit
 router.get('/:id/edit', authDataController.auth, dataController.show, viewController.edit);
+
+// All Products (for all users)
+router.get('/all', authDataController.auth, dataController.indexofall, viewController.Indexofall);
 // Show
 router.get('/:id', authDataController.auth, dataController.show, viewController.show);
+
+
+
 // export router
 module.exports = router;

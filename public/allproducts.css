@@ -1,8 +1,24 @@
+/* Back to Inventory Button Styling */
+.back-to-inventory-btn {
+  font-size: 18px;
+  color: #1e3a8a;
+  font-weight: bold;
+  background: #e3e9ff;
+  border-radius: 6px;
+  padding: 3px 16px;
+  margin-right: 5px;
+  display: inline-block;
+  border: 2px solid #2e19e6;
+  cursor: pointer;
+  text-decoration: none;
+}
+.back-to-inventory-btn:hover {
+ background-color: #b3bee0;
+}
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f4f7fa;
   color: #333;
-  line-height: 1.6;
 }
 
 nav {
@@ -21,14 +37,13 @@ nav {
   justify-content: center;
 }
 
-#thewebname {
-  background-color: #8cc6af;
+#thewebname{
+  background-color: #af8c56;
   border: 3px solid #2e19e6;
   border-radius: 7px;
-  font-style: italic;
+  font-style: italic; 
   font-size: 30px;
-  color: #1e3a8a;
-  padding: 4px 18px;
+  margin: 3px;
 }
 
 #hero {
@@ -73,7 +88,7 @@ main {
 }
 
 .product-card {
-  background-color: #e9f7ef;
+  background-color: #b4bcd3;
   padding: 24px;
   border-radius: 12px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);

@@ -67,6 +67,15 @@ dataController.show = async (req, res, next) => {
     }
 }
 
+dataController.indexofall = async (req, res, next) => {
+  console.log("indexofall")
+  Product.find({}).populate('supplier')
+    .then(products => {
+      res.locals.data.products = products
+      next()
+    })    
+}
+
 
 
 module.exports = dataController

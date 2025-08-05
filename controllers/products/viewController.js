@@ -54,6 +54,10 @@ const viewController = {
       res.redirect(`${RESOURCE_PATH}/${id}`);
     }
   },
+
+  Indexofall(req, res, next) {
+    res.render('allproducts/Index',  res.locals.data.products );
+  }
 };
 
 

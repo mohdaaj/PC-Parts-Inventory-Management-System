@@ -1,8 +1,8 @@
 const React = require('react');
 
 function Index(props) {
-  const products = props.products;
-
+  const products = props.data.products;
+  // console.log("index", props)
   return (
     <html lang="en">
       <head>
@@ -15,6 +15,14 @@ function Index(props) {
         <nav>
           <div id="destinations">
             <p id="thewebname">All PC PARTS</p>
+          </div>
+          <div id="actions" style={{marginLeft: 'auto'}}>
+            <a 
+              href={`/products${props.data && props.data.token ? `?token=${props.data.token}` : ''}`}
+              className="btn btn-secondary back-to-inventory-btn"
+            >
+              ← Back to Your Inventory
+            </a>
           </div>
         </nav>
 
