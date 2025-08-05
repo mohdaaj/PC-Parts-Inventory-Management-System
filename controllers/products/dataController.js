@@ -67,14 +67,6 @@ dataController.show = async (req, res, next) => {
     }
 }
 
-dataController.Indexofall = async (req, res, next) => {
-  try {
-    const products = await Product.find().populate('supplier');
-    res.locals.data.products = products;
-    next();
-  } catch (error) {
-    res.status(400).send({ message: error.message });
-  }
-}
+
 
 module.exports = dataController

@@ -5,8 +5,6 @@ const dataController = require('./dataController.js')
 const authDataController = require('../auth/dataController.js')
 
 // add routes
-// All products (public, no auth)
-router.get('/all', dataController.Indexofall, viewController.allProductsIndex);
 // Index (user's products)
 router.get('/', authDataController.auth, dataController.index, viewController.Index);
 // New

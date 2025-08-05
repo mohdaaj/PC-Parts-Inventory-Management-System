@@ -1,4 +1,3 @@
-const { all } = require("./routeController");
 
 const RESOURCE_PATH = '/products';
 
@@ -55,12 +54,6 @@ const viewController = {
       res.redirect(`${RESOURCE_PATH}/${id}`);
     }
   },
-
-  allProductsIndex(req, res, next) {
-    res.render('allproducts/Index', {
-      products: res.locals.data.products
-    });
-  }
 };
 
 

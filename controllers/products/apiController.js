@@ -22,10 +22,6 @@ const apiController = {
     res.status(200).json({ message: 'Products successfully deleted' })
   },
 
-  // Get all products for all users (public API)
-  allProductsIndex(req, res) {
-res.json(res.locals.data.product)
-}
 }
 
 module.exports = apiController 
