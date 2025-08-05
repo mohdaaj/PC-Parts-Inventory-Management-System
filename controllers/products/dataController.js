@@ -1,3 +1,4 @@
+
 const Product = require('../../models/products.js')
 
 const dataController = {}
@@ -64,6 +65,16 @@ dataController.show = async (req, res, next) => {
     } catch (error) {
       res.status(400).send({ message: error.message })
     }
+}
+
+dataController.Indexofall = async (req, res, next) => {
+  try {
+    const products = await Product.find().populate('supplier');
+    res.locals.data.products = products;
+    next();
+  } catch (error) {
+    res.status(400).send({ message: error.message });
+  }
 }
 
 module.exports = dataController

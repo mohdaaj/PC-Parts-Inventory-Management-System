@@ -1,3 +1,5 @@
+const { all } = require("./routeController");
+
 const RESOURCE_PATH = '/products';
 
 const viewController = {
@@ -45,14 +47,23 @@ const viewController = {
     const id = req.params.id || (res.locals.data.product && res.locals.data.product._id);
     if (!id) {
       res.redirect(RESOURCE_PATH + `/${req.params.id}?token=${res.locals.data.token}`)
+      return;
     }
-
     if (res.locals.data.token) {
       res.redirect(`${RESOURCE_PATH}/${id}?token=${res.locals.data.token}`);
     } else {
       res.redirect(`${RESOURCE_PATH}/${id}`);
     }
+  },
+
+  allProductsIndex(req, res, next) {
+    res.render('allproducts/Index', {
+      products: res.locals.data.products
+    });
   }
 };
+
+
+
 
 module.exports = viewController;

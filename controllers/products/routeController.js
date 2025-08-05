@@ -3,9 +3,12 @@ const router = express.Router();
 const viewController = require('./viewController.js')
 const dataController = require('./dataController.js')
 const authDataController = require('../auth/dataController.js')
+
 // add routes
-// Index
-router.get('/', authDataController.auth,dataController.index, viewController.Index);
+// All products (public, no auth)
+router.get('/all', dataController.Indexofall, viewController.allProductsIndex);
+// Index (user's products)
+router.get('/', authDataController.auth, dataController.index, viewController.Index);
 // New
 router.get('/new', authDataController.auth, viewController.newView );
 // Delete
