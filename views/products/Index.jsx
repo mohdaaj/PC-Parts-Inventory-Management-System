@@ -21,6 +21,7 @@ function Index(props) {
           <div id="actions">
             {user ? (
               <>
+                <button type="submit" id="allproducts">ALL PRODUTS</button>
                 <p id="welcominguser">Welcome, {user.name}</p>
                 <form action="/users" method="POST">
                   <button type="submit" className="btn btn-secondary">Log Out</button>
@@ -45,10 +46,8 @@ function Index(props) {
         </section>
 
         <main>
-          <h1>🛒 All Products</h1>
-
           <div className="d-flex justify-between align-center mb-3">
-            <h2>Product Inventory</h2>
+            <h2>Your Products Inventory</h2>
             <a href={`/products/new?token=${token}`} className="btn btn-primary">
               ➕ Add New Product
             </a>

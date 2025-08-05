@@ -10,6 +10,24 @@
   font-style: italic;
   border: 2px solid #2e19e6;
 }
+
+#allproducts {
+  font-size: 18px;
+  color: #1e3a8a;
+  font-weight: bold;
+  background: #e3e9ff;
+  border-radius: 6px;
+  padding: 3px 16px;
+  margin-right: 5px;
+  display: inline-block;
+  border: 2px solid #2e19e6;
+  cursor: pointer;
+}
+
+#allproducts:hover{
+ background-color: #b3bee0;
+}
+
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f4f7fa;
