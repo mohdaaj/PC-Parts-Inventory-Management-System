@@ -23,7 +23,8 @@ function Edit(props) {
 
         <div className="form-group">
           <label htmlFor="description">Description:</label>
-          <textarea
+          <input
+            type="text"
             id="description"
             name="description"
             defaultValue={description}
@@ -35,7 +36,7 @@ function Edit(props) {
         <div className="form-group">
           <label htmlFor="price">Price (USD):</label>
           <input
-            type="number"
+            type="text"
             id="price"
             name="price"
             defaultValue={price}
@@ -48,22 +49,11 @@ function Edit(props) {
         <div className="form-group">
           <label htmlFor="quantity">Quantity:</label>
           <input
-            type="number"
+            type="text"
             id="quantity"
             name="quantity"
             defaultValue={quantity}
             min="0"
-          />
-        </div>
-
-        <div className="form-group">
-          <label htmlFor="supplier">Supplier ID:</label>
-          <input
-            type="text"
-            id="supplier"
-            name="supplier"
-            defaultValue={supplier}
-            placeholder="Enter supplier ObjectId..."
           />
         </div>
 

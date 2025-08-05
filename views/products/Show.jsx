@@ -4,6 +4,8 @@ const Layout = require('../layouts/Layout');
 function Show(props) {
   const { name, description, price, quantity, createdAt, supplier, _id } = props.product;
 
+  const token = props.data?.token;
+
   return (
     <Layout product={props.product}>
       <h1>🖥️ {name}</h1>
@@ -19,16 +21,16 @@ function Show(props) {
         )}
 
         <div className="mt-3 d-flex gap-2">
-          <a href={`/products?token=${props.token}`} className="btn btn-secondary">
+          <a href={`/products?token=${token}`} className="btn btn-secondary">
             ← Back to All Products
           </a>
-          <a href={`/products/${_id}/edit?token=${props.token}`} className="btn btn-primary">
+          <a href={`/products/${_id}/edit?token=${token}`} className="btn btn-primary">
             ✏️ Edit {name}
           </a>
         </div>
 
         <div className="mt-3">
-          <form action={`/products/${_id}?_method=DELETE&token=${props.token}`} method="POST">
+          <form action={`/products/${_id}?_method=DELETE&token=${token}`} method="POST">
             <button type="submit" className="btn btn-danger">
               🗑️ Delete {name}
             </button>

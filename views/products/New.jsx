@@ -22,7 +22,7 @@ function New(props) {
           <label htmlFor="description">Description:</label>
           <input
             type="text"
-            id="text"
+            id="description"
             name="description"
             placeholder="Enter product description..."
             rows="3"
