@@ -51,15 +51,6 @@ function New(props) {
           />
         </div>
 
-        <div className="form-group">
-          <label htmlFor="supplier">Supplier Name:</label>
-          <input
-            type="text"
-            id="supplier"
-            name="supplier"
-            placeholder="Supplier Name"
-          />
-        </div>
 
         <div className="d-flex gap-2">
           <button type="submit" className="btn btn-primary">

@@ -5,8 +5,8 @@ const dataController = {}
 // GET /products
 dataController.index = async (req, res, next) => {
   try {
-    const products = await Product.find().populate('supplier') // ✅ populate supplier if needed
-    res.locals.data.products = products
+    const user = await req.user.populate('products') // ✅ populate product if needed
+    res.locals.data.products = user.products
     next()
   } catch (error) {
     res.status(400).send({ message: error.message })
@@ -23,9 +23,22 @@ dataController.destroy = async (req, res, next) => {
   }
 }
 
-// PUT /products/:id
 dataController.update = async (req, res, next) => {
 
+  try {
+    const updatedProduct = await Product.findByIdAndUpdate(
+      req.params.id,
+      req.body,
+      { new: true, runValidators: true }
+    );
+    if (!updatedProduct) {
+      return res.status(404).send({ message: `Product with id ${req.params.id} not found` });
+    }
+    res.locals.data.product = updatedProduct;
+    next();
+  } catch (error) {
+    res.status(400).send({ message: error.message });
+  }
 }
 
 // POST /products
@@ -33,6 +46,7 @@ dataController.create = async (req, res, next) => {
   try {
       res.locals.data.product = await Product.create(req.body)
       req.user.products.addToSet({_id: res.locals.data.product._id })
+      await req.user.save()
     next()
   } catch (error) {
     res.status(400).send({ message: error.message })

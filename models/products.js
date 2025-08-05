@@ -5,7 +5,6 @@ const productSchema = new mongoose.Schema({
   description: String,
   price: { type: String, required: true },
   quantity: { type: String, default: 0 },
-  supplier: { type: mongoose.Schema.Types.ObjectId, ref: 'Supplier' },
   createdAt: { type: Date, default: Date.now }
 })
 

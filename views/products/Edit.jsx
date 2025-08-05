@@ -8,7 +8,7 @@ function Edit(props) {
     <Layout>
       <h1>✏️ Edit {name}</h1>
 
-      <form action={`/products/${_id}?_method=PUT&token=${props.token}`} method="POST">
+      <form action={`/products/${_id}?_method=PUT&token=${props.data.token}`} method="POST">
         <div className="form-group">
           <label htmlFor="name">Product Name:</label>
           <input
@@ -61,7 +61,7 @@ function Edit(props) {
           <button type="submit" className="btn btn-primary">
             💾 Update Product
           </button>
-          <a href={`/products/${_id}?token=${props.token}`} className="btn btn-secondary">
+          <a href={`/products/${_id}?token=${props.data.token}`} className="btn btn-secondary">
             ← Back to {name}
           </a>
         </div>

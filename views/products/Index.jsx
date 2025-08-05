@@ -21,16 +21,16 @@ function Index(props) {
           <div id="actions">
             {user ? (
               <>
-                <p>Welcome, {user.name}</p>
+                <p id="welcominguser">Welcome, {user.name}</p>
                 <form action="/users" method="POST">
-                  <button type="submit">Log Out</button>
+                  <button type="submit" className="btn btn-secondary">Log Out</button>
                 </form>
               </>
             ) : (
               <>
-                <p><a href="/users/login">Sign In</a></p>
+                <p><a href="/users/login" className="btn btn-primary">Sign In</a></p>
                 <form action="/users" method="GET">
-                  <button type="submit">Sign Up</button>
+                  <button type="submit" className="btn btn-secondary">Sign Up</button>
                 </form>
               </>
             )}
@@ -39,15 +39,10 @@ function Index(props) {
 
         <section id="hero">
           <div id="headers">
-            <h1>Best website for finding PC parts.</h1>
+            <h1>Best Website for Saving Your PC Parts.</h1>
             <h2>Post your Computer part now!</h2>
           </div>
         </section>
-
-        <div id="subnav">
-          <button id="sort">Popular</button>
-          <button id="filter">Filter</button>
-        </div>
 
         <main>
           <h1>🛒 All Products</h1>
@@ -62,11 +57,11 @@ function Index(props) {
           <div className="products-grid">
             {products.map((product) => (
               <div key={product._id} className="product-card">
-                <div className="product-name"><strong>{product.name}</strong></div>
+                <div className="product-name">{product.name}</div>
                 <div className="product-description">📝 {product.description || 'No description'}</div>
                 <div className="product-price">💰 Price: ${product.price}</div>
                 <div className="product-quantity">📦 In Stock: {product.quantity}</div>
-                <div className="product-supplier">🏢 Supplier: {product.supplier?.name || '—'}</div>
+                <div className="product-supplier">🏢 Supplier: {user?.name || '—'}</div>
                 <div className="product-date">📅 Added: {new Date(product.createdAt).toLocaleDateString()}</div>
                 <div className="d-flex gap-2 mt-2">
                   <a href={`/products/${product._id}?token=${token}`} className="btn btn-secondary">
