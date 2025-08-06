@@ -47,7 +47,7 @@ function Index(props) {
 
         <main>
           <div className="d-flex justify-between align-center mb-3">
-            <h2>Your Products Inventory</h2>
+            <h2>🖥Your Products Inventory</h2>
             <a href={`/products/new?token=${token}`} className="btn btn-primary">
               ➕ Add New Product
             </a>

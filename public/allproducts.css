@@ -23,7 +23,7 @@ body {
 }
 
 nav {
-  background-color:  #fffccc;
+  background-color:  #7e9194;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -39,10 +39,10 @@ nav {
 }
 
 #thewebname{
-  background-color: #af8c56;
-  border: 3px solid #2e19e6;
+  background-color: #817979;
+  border: 3px solid #6054cc;
   border-radius: 7px;
-  font-style: italic; 
+  font-style:unset;
   font-size: 30px;
   margin: 3px;
 }
@@ -79,7 +79,7 @@ section h2 {
 
 main {
   padding: 40px;
-  background-color: #fffccc;
+  background-color: #7e9194;
 }
 
 .products-grid {
