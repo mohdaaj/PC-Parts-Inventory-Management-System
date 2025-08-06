@@ -12,6 +12,7 @@ function CartIndex(props) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="/allproducts.css" />
         <link rel="stylesheet" href="/cart-index.css" />
+        <link rel="stylesheet" href="../allproducts/Index" />
       </head>
       <body>
         <div className="cart-container">

@@ -49,9 +49,6 @@ function Index(props) {
                   <div className="product-supplier">🏢 Supplier: {product.supplier?.name || '—'}</div>
                   <div className="product-date">📅 Added: {new Date(product.createdAt).toLocaleDateString()}</div>
                   <div className="d-flex gap-2 mt-2">
-                  <a href={`/allproducts/${product._id}${token ? `?token=${token}` : ''}`} className="btn btn-secondary">
-                    👁️ View
-                  </a>
                   <form action={`/cart/${product._id}/add${token ? `?token=${token}` : ''}`} method="POST">
                     <button type="submit" className="btn btn-primary">
                       🛒 Add to cart

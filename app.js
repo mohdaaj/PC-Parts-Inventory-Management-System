@@ -4,6 +4,7 @@ const jsxEngine = require('jsx-view-engine')
 const methodOverride = require('method-override')
 const userRoutes = require('./controllers/auth/routeController')
 const productsRouter = require('./controllers/products/routeController')
+const cartRouter = require('./controllers/cart/routeController')
 const apiRoutes = require('./routes/apiRoutes')
 
 const app = express()
@@ -21,10 +22,12 @@ app.use((req, res, next) => {
 app.use(express.static('public'))
 app.use(morgan('dev'))
 
+
 // Web routes (for views)
 app.use('/users', userRoutes)
 app.use('/products', productsRouter)
 
+app.use('/cart', cartRouter)
 // API routes (for JSON responses)
 app.use('/api', apiRoutes)
 
