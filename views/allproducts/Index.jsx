@@ -1,8 +1,9 @@
 const React = require('react');
 
 function Index(props) {
-  const products = props.data.products;
-  const token = props.token;
+  // Support both direct and nested products (for compatibility with controller)
+  const products = (props.data && props.data.products) || props.products || [];
+  const token = (props.data && props.data.token) || props.token || '';
   // console.log("index", props)
   return (
     <html lang="en">

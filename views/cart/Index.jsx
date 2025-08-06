@@ -11,12 +11,16 @@ function CartIndex(props) {
         <title>Your Cart</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="/allproducts.css" />
-        <link rel="stylesheet" href="/cart-index.css" />
-        <link rel="stylesheet" href="../allproducts/Index" />
+
       </head>
       <body>
         <div className="cart-container">
           <div className="cart-title">🛒 Your Cart</div>
+          <div style={{ marginBottom: '1rem' }}>
+            <a href={`/products/all${token ? `?token=${token}` : ''}`} className="btn btn-secondary back-to-inventory-btn">
+              ← Back to All Products
+            </a>
+          </div>
           {cart.length === 0 ? (
             <p>Your cart is empty.</p>
           ) : (
