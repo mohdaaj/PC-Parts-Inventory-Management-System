@@ -16,13 +16,14 @@ function Index(props) {
           <div id="destinations">
             <p id="thewebname">All PC PARTS</p>
           </div>
-          <div id="actions" style={{marginLeft: 'auto'}}>
-            <a 
-              href={`/products${props.data && props.data.token ? `?token=${props.data.token}` : ''}`}
-              className="btn btn-secondary back-to-inventory-btn"
-            >
-              ← Back to Your Inventory
+          <div id="actions" style={{marginLeft: '845px', fontSize: '20px'}}>
+            <a href={`/cart${props.data && props.data.token ? `?token=${props.data.token}` : ''}`}
+             className="btn btn-secondary back-to-inventory-btn">🛒
             </a>
+          </div>
+          <div id="actions" style={{marginLeft: 'auto'}}>
+            <a href={`/products${props.data && props.data.token ? `?token=${props.data.token}` : ''}`}
+              className="btn btn-secondary back-to-inventory-btn">← Back to Your Inventory</a>
           </div>
         </nav>
 
@@ -46,6 +47,14 @@ function Index(props) {
                   <div className="product-quantity">📦 In Stock: {product.quantity}</div>
                   <div className="product-supplier">🏢 Supplier: {product.supplier?.name || '—'}</div>
                   <div className="product-date">📅 Added: {new Date(product.createdAt).toLocaleDateString()}</div>
+                  <div className="d-flex gap-2 mt-2">
+                  <a href={``} className="btn btn-secondary">
+                    👁️ View
+                  </a>
+                  <a href={``} className="btn btn-primary">
+                    🛒 Add to cart
+                  </a>
+                </div>
                 </div>
               ))
             ) : (
