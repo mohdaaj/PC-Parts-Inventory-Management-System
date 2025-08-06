@@ -33,50 +33,53 @@ A full-stack inventory management system tailored for managing stock, orders, an
 
 ## 🌐 Web Routes (Views)
 
-| Method | Route                  | Purpose                              | Authentication |
-|--------|------------------------|--------------------------------------|----------------|
-| GET    | /users                 | Show signup form                     | ❌ No           |
-| POST   | /users                 | Create user account                  | ❌ No           |
-| GET    | /users/login           | Show login form                      | ❌ No           |
-| POST   | /users/login           | Authenticate user                    | ❌ No           |
-| GET    | /products              | Show all PC parts                    | ✅ Yes          |
-| GET    | /products/new          | Show form to add new product         | ✅ Yes          |
-| POST   | /products              | Add new product                      | ✅ Yes          |
-| GET    | /products/:id          | Show product details                 | ✅ Yes          |
-| GET    | /products/:id/edit     | Show edit form for a product         | ✅ Yes          |
-| PUT    | /products/:id          | Update product                       | ✅ Yes          |
-| DELETE | /products/:id          | Delete product                       | ✅ Yes          |
-| GET    | /suppliers             | Show list of suppliers               | ✅ Yes          |
-| GET    | /cart                  | Show all produts                     | ✅ Yes          |
+| Method | Route                        | Purpose                                 | Authentication |
+|--------|------------------------------|-----------------------------------------|----------------|
+| GET    | /users                       | Show signup form                        | ❌ No           |
+| POST   | /users                       | Create user account                     | ❌ No           |
+| GET    | /users/login                 | Show login form                         | ❌ No           |
+| POST   | /users/login                 | Authenticate user                       | ❌ No           |
+| GET    | /products                    | Show user's products                    | ✅ Yes          |
+| GET    | /products/new                | Show form to add new product            | ✅ Yes          |
+| POST   | /products                    | Add new product                         | ✅ Yes          |
+| GET    | /products/:id                | Show product details                    | ✅ Yes          |
+| GET    | /products/:id/edit           | Show edit form for a product            | ✅ Yes          |
+| PUT    | /products/:id                | Update product                          | ✅ Yes          |
+| DELETE | /products/:id                | Delete product                          | ✅ Yes          |
+| GET    | /products/all                | Show all products (all users)           | ✅ Yes          |
+| GET    | /cart                        | Show user's cart                        | ✅ Yes          |
+| POST   | /cart/:id/add                | Add product to cart                     | ✅ Yes          |
+| POST   | /cart/:id/decrease           | Decrease product quantity in cart       | ✅ Yes          |
+| POST   | /cart/:id/delete             | Remove product from cart                | ✅ Yes          |
 
 
 ### ✅ Web Route Summary
-- **Total Web Routes**: 13  
-- 🔐 **Require Authentication**: 9  
+- **Total Web Routes**: 15  
+- 🔐 **Require Authentication**: 11  
 - 🌐 **Publicly Accessible**: 4
 
 ---
 
 ## 🔌 API Routes (JSON)
 
-| Method | Route                   | Purpose                              | Authentication |
-|--------|-------------------------|--------------------------------------|----------------|
-| POST   | /api/users              | Create user (API)                    | ❌ No           |
-| POST   | /api/users/login        | Login user (API)                     | ❌ No           |
-| GET    | /api/users/profile      | Get user (API)                       | ✅ Yes          |
-| GET    | /api/products           | List all PC parts                    | ✅ Yes          |
-| GET    | /api/products/:id       | Get product by ID                    | ✅ Yes          |
-| POST   | /api/products           | Create new product                   | ✅ Yes          |
-| PUT    | /api/products/:id       | Update product                       | ✅ Yes          |
-| DELETE | /api/products/:id       | Delete product                       | ✅ Yes          |
-| GET    | /api/suppliers          | List suppliers                       | ✅ Yes          |
-| GET    | /api/cart               | List all products                    | ✅ Yes          |
-| GET    | /api/cart/:id           | Get order by ID                      | ✅ Yes          |
-| POST   | /api/cart               | Create new order                     | ✅ Yes          |
+| Method | Route                        | Purpose                                 | Authentication |
+|--------|------------------------------|-----------------------------------------|----------------|
+| POST   | /api/users                    | Create user (API)                        | ❌ No           |
+| POST   | /api/users/login              | Login user (API)                         | ❌ No           |
+| GET    | /api/users/profile            | Get user profile (API)                   | ✅ Yes          |
+| PUT    | /api/users/:id                | Update user (API)                        | ✅ Yes          |
+| DELETE | /api/users/:id                | Delete user (API)                        | ✅ Yes          |
+| GET    | /api/products                 | List user's products (API)               | ✅ Yes          |
+| GET    | /api/products/:id             | Get product by ID (API)                  | ✅ Yes          |
+| POST   | /api/products                 | Create new product (API)                 | ✅ Yes          |
+| PUT    | /api/products/:id             | Update product (API)                     | ✅ Yes          |
+| DELETE | /api/products/:id             | Delete product (API)                     | ✅ Yes          |
+| GET    | /api/products/all             | List all products (all users, API)       | ✅ Yes          |
+
 
 ### ✅ API Route Summary
-- **Total API Routes**: 12  
-- 🔐 **Require Authentication**: 10  
+- **Total API Routes**: 15  
+- 🔐 **Require Authentication**: 9 
 - 🌐 **Publicly Accessible**: 2
 
 ---
@@ -85,9 +88,9 @@ A full-stack inventory management system tailored for managing stock, orders, an
 
 | Route Type   | Total Routes | Auth Required | Public |
 |--------------|--------------|----------------|--------|
-| Web Views    | 13           | 12             | 4      |
-| API (JSON)   | 12           | 10              | 3      |
-| **Combined** | **25**       | **21**         | **7**  |
+| Web Views    | 15           | 11             | 4      |
+| API (JSON)   | 15           | 9              | 2      |
+| **Combined** | **30**       | **20**         | **6**  |
 
 ---
 

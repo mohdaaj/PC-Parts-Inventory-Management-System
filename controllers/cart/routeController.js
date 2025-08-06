@@ -7,19 +7,10 @@ const authDataController = require('../auth/dataController.js')
 // Cart index
 router.get('/', authDataController.auth, dataController.index, viewController.Indexofcart);
 // Add to cart
-router.post('/:id/add', authDataController.auth, dataController.add, (req, res) => {
-  const token = req.query.token ? `?token=${req.query.token}` : '';
-  res.redirect('/cart' + token);
-});
+router.post('/:id/add', authDataController.auth, dataController.add, viewController.addtoCart);
 // Decrease quantity
-router.post('/:id/decrease', authDataController.auth, dataController.decrease, (req, res) => {
-  const token = req.query.token ? `?token=${req.query.token}` : '';
-  res.redirect('/cart' + token);
-});
+router.post('/:id/decrease', authDataController.auth, dataController.decrease, viewController.decrease);
 // Delete from cart
-router.post('/:id/delete', authDataController.auth, dataController.delete, (req, res) => {
-  const token = req.query.token ? `?token=${req.query.token}` : '';
-  res.redirect('/cart' + token);
-});
+router.post('/:id/delete', authDataController.auth, dataController.delete, viewController.delete);
 
 module.exports = router;
