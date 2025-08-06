@@ -2,6 +2,7 @@ const React = require('react');
 
 function Index(props) {
   const products = props.data.products;
+  const token = props.token;
   // console.log("index", props)
   return (
     <html lang="en">
@@ -16,7 +17,7 @@ function Index(props) {
           <div id="destinations">
             <p id="thewebname">All PC PARTS</p>
           </div>
-          <div id="actions" style={{marginLeft: '845px', fontSize: '20px'}}>
+          <div id="actions" style={{marginLeft: '890px', fontSize: '20px'}}>
             <a href={`/cart${props.data && props.data.token ? `?token=${props.data.token}` : ''}`}
              className="btn btn-secondary back-to-inventory-btn">🛒
             </a>
@@ -48,12 +49,14 @@ function Index(props) {
                   <div className="product-supplier">🏢 Supplier: {product.supplier?.name || '—'}</div>
                   <div className="product-date">📅 Added: {new Date(product.createdAt).toLocaleDateString()}</div>
                   <div className="d-flex gap-2 mt-2">
-                  <a href={``} className="btn btn-secondary">
+                  <a href={`/allproducts/${product._id}${token ? `?token=${token}` : ''}`} className="btn btn-secondary">
                     👁️ View
                   </a>
-                  <a href={``} className="btn btn-primary">
-                    🛒 Add to cart
-                  </a>
+                  <form action={`/cart/${product._id}/add${token ? `?token=${token}` : ''}`} method="POST">
+                    <button type="submit" className="btn btn-primary">
+                      🛒 Add to cart
+                    </button>
+                  </form>
                 </div>
                 </div>
               ))
