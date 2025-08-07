@@ -46,7 +46,6 @@ function Index(props) {
                   <div className="product-description">📝 {product.description || 'No description'}</div>
                   <div className="product-price">💰 Price: ${product.price}</div>
                   <div className="product-quantity">📦 In Stock: {product.quantity}</div>
-                  <div className="product-supplier">🏢 Supplier: {product.supplier?.name || '—'}</div>
                   <div className="product-date">📅 Added: {new Date(product.createdAt).toLocaleDateString()}</div>
                   <div className="d-flex gap-2 mt-2">
                   <form action={`/cart/${product._id}/add${token ? `?token=${token}` : ''}`} method="POST">
