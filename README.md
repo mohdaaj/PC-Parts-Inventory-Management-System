@@ -1,4 +1,4 @@
-# 🖥️ PC Parts Inventory Management System
+# 🖥️ PC Parts BH
 
 A full-stack inventory management system tailored for managing stock, orders, and suppliers of PC components such as CPUs, GPUs, RAM, and you can also add your favourite parts from all products page to your cart and delete them in anytime you want.
 
