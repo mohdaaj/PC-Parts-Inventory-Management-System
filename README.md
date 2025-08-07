@@ -4,7 +4,7 @@ A full-stack inventory management system tailored for managing stock, orders, an
 
 ---
 ## Home Page
-![image](public\websitemainpage.PNG)
+![image](public/websitemainpage.PNG)
 
 ---
 ## My Trello
