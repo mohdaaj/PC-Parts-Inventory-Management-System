@@ -3,6 +3,10 @@
 A full-stack inventory management system tailored for managing stock, orders, and suppliers of PC components such as CPUs, GPUs, RAM, and you can also add your favourite parts from all products page to your cart and delete them in anytime you want.
 
 ---
+## Home Page
+![image](public\websitemainpage.PNG)
+
+---
 ## My Trello
 - **[Trello](https://trello.com/invite/b/6889fa44f2109b79c564c9b2/ATTI3dabdfe95b627c30dfc15dc605372827DF923D12/pc-parts-inventory-management-system)**
 
