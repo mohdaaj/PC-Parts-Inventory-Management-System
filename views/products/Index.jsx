@@ -21,7 +21,7 @@ function Index(props) {
           <div id="actions">
             {user ? (
               <>
-                <a href={`/products/all${token ? `?token=${token}` : ''}`} id="allproducts" className="btn btn-primary">ALL PRODUCTS</a>
+                <a href={`/products/all${token ? `?token=${token}` : ''}`} id="allproducts" className="btn btn-primary">📦 ALL PRODUCTS</a>
                 <p id="welcominguser"  >Welcome, {user.name}</p>
                 <form action="/users" method="POST">
                   <button type="submit" className="btn btn-secondary">Log Out</button>
