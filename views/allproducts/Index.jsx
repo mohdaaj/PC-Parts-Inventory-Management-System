@@ -10,11 +10,12 @@ function Index(props) {
         <title>All Products - All Users</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="/allproducts.css" />
+        
       </head>
       <body>
         <nav>
           <div id="destinations">
-            <p id="thewebname">All PC PARTS</p>
+            <p id="thewebname">PC PARTS BH</p>
           </div>
           <div id="actions" style={{marginLeft: '890px', fontSize: '20px'}}>
             <a href={`/cart${props.data && props.data.token ? `?token=${props.data.token}` : ''}`}

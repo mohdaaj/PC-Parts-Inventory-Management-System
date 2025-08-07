@@ -12,11 +12,12 @@ function Index(props) {
         <title>All Products - products App</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="/products-index.css" />
+        
       </head>
       <body>
         <nav>
           <div id="destinations">
-            <p id="thewebname">PC PARTS</p>
+            <p id="thewebname">PC PARTS BH</p>
           </div>
           <div id="actions">
             {user ? (
